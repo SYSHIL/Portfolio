@@ -1,3 +1,4 @@
+
 body{
     display: flex;
     flex-direction: column;
@@ -32,6 +33,7 @@ body{
     display : flex;
     flex-direction: row;
     padding : 2rem;
+    box-sizing: border-box;
     background-color: #191950;
     justify-content: center;
     gap : 2%;
@@ -43,16 +45,18 @@ body{
     width : 50%;
 }
 .awesome-website button{
-    width : 15%;
+    width : 6vw;
     align-self: center;
     color : white;
     background-color: rgb(7, 33, 105);
     border-radius: 5%;
     border-width : 2%;
     border-color: aqua;
+    overflow: scroll;
 }
 .hero img{
-    height : 70%;
+    max-height: 70%;
+    width: auto;
     align-self: center;
 }
 
@@ -93,3 +97,14 @@ h1{
     margin-left: auto;
     margin-right: auto;
 }
+
+@media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+    }
+    .hero img{
+        max-width: 50%;
+    }
+
+    
+  }
